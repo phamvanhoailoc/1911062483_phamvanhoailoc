@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _1911062483_phamvanhoailoc.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +9,18 @@ namespace _1911062483_phamvanhoailoc.Controllers
 {
     public class HomeController : Controller
     {
+        private ApplicationDbContext _dbContext;
+        public HomeController()
+        {
+            _dbContext = new ApplicationDbContext();
+        }
         public ActionResult Index()
         {
-            return View();
+            var upcommongCourses = _dbContext.Courses
+                //.Include(c => c.lecturer)
+                //.Include(c => c.category)
+                .Where(c => c.DateTime > DateTime.Now);
+            return View(upcommongCourses);
         }
 
         public ActionResult About()
