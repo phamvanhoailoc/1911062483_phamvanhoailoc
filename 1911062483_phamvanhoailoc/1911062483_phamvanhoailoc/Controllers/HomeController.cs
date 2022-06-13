@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Data.Entity;
 using System.Web.Mvc;
+using _1911062483_phamvanhoailoc.ViewModels;
 
 namespace _1911062483_phamvanhoailoc.Controllers
 {
@@ -17,12 +18,16 @@ namespace _1911062483_phamvanhoailoc.Controllers
         }
         public ActionResult Index()
         {
-            var upcommongCourses = _dbContext.Courses
+            var upcommingCourses = _dbContext.Courses
                 .Include(c => c.Lecturer)
                 .Include(c => c.Category)
                 .Where(c => c.DateTime > DateTime.Now);
-
-            return View(upcommongCourses);
+            var viewModel = new CourseViewModel
+            {
+                UpcommingCourses = upcommingCourses,
+                ShowAction = User.Identity.IsAuthenticated
+            };
+            return View(viewModel);
         }
 
         public ActionResult About()

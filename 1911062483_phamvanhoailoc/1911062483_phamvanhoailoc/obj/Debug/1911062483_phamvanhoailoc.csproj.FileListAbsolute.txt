@@ -228,3 +228,4 @@ E:\Hoc Tap\TH_WED\bigschool\1911062483_phamvanhoailoc\1911062483_phamvanhoailoc\
 E:\Hoc Tap\TH_WED\bigschool\1911062483_phamvanhoailoc\1911062483_phamvanhoailoc\1911062483_phamvanhoailoc\bin\System.Net.Http.Formatting.xml
 E:\Hoc Tap\TH_WED\bigschool\1911062483_phamvanhoailoc\1911062483_phamvanhoailoc\1911062483_phamvanhoailoc\bin\System.Web.Http.xml
 E:\Hoc Tap\TH_WED\bigschool\1911062483_phamvanhoailoc\1911062483_phamvanhoailoc\1911062483_phamvanhoailoc\bin\System.Web.Http.WebHost.xml
+E:\Hoc Tap\TH_WED\bigschool\1911062483_phamvanhoailoc\1911062483_phamvanhoailoc\1911062483_phamvanhoailoc\obj\Debug\_1911062483_phamvanhoailoc.Migrations.AddFollowingsTable.resources
