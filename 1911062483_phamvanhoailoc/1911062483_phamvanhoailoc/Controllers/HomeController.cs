@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data.Entity;
 using System.Web.Mvc;
 
 namespace _1911062483_phamvanhoailoc.Controllers
@@ -17,9 +18,10 @@ namespace _1911062483_phamvanhoailoc.Controllers
         public ActionResult Index()
         {
             var upcommongCourses = _dbContext.Courses
-                //.Include(c => c.lecturer)
-                //.Include(c => c.category)
+                .Include(c => c.Lecturer)
+                .Include(c => c.Category)
                 .Where(c => c.DateTime > DateTime.Now);
+
             return View(upcommongCourses);
         }
 
