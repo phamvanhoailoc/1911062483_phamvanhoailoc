@@ -10,6 +10,7 @@ using System.Web.Http;
 
 namespace _1911062483_phamvanhoailoc.Controllers
 {
+    [Authorize]
     public class AttendancesController : ApiController
     {
         private ApplicationDbContext _dbContext;
@@ -33,8 +34,5 @@ namespace _1911062483_phamvanhoailoc.Controllers
             return Ok();
 
         }
-
-
-    }         
+    }
 }
-

@@ -1,13 +1,12 @@
 ﻿@model _1911062483_phamvanhoailoc.ViewModels.CourseViewModel
 @{
     ViewBag.Title = "Home Page";
-   
 }
 <div class="course">
     <ul>
         @foreach (var course in Model.UpcommingCourses)
         {
-            <li>         
+            <li>
                 <div class="date">
                     <div class="month">
                         @course.DateTime.ToString("MM")
@@ -31,8 +30,6 @@
                             <button data-course-id="@course.Id" class="btn btn-default btn-sm js-toggle-attendance">Going?</button>
                         }
                     </span>
-                    
-
                 </div>
             </li>
         }
