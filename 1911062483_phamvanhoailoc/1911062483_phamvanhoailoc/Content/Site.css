@@ -1,6 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -23,30 +24,82 @@ textarea {
     max-width: 280px;
 }
 /*Course layout*/
-.course{
-    list-style:none;
+.course {
+    list-style: none;
+    color:red;
 }
-.course > li{
-    position:relative;
-    margin-bottom:30px;
+
+    .course > li {
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+        .course > li .date {
+            text-align: center;
+            background-color: #ff0000;
+            color: brown;
+            width: 60px;
+            border-radius: 8px;
+        }
+
+        .course > li .details {
+            position: absolute;
+            top: 0;
+            left: 70px;
+        }
+
+        .course > li .action {
+            display: none;
+            left: 70px;
+            position: absolute;
+        }
+
+        .course > li:hover .action {
+            display: block;
+        }
+.btn-sm, .btn-group-sm > .btn {
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    background: yellow;
+    border-radius: 3px;
 }
-.course >li .date{
-    text-align:center;
-    background-color:#ff0000;
-    color:white;
-    width:60px;
-    border-radius:8px;
+.date {
+    display: inline-block;
+    width: 40px;
+    background-color: pink;
+    padding: 10px;
 }
-.course >li .details{
-    position:absolute;
-    top:0;
-    left:70px;
+.date {
+    display: inline-block;
+    width: 40px;
+    background-color: pink;
+    padding: 10px;
+    margin-top: 20px;
 }
-.course >li .action{
-    display: none;
-    left: 70px;
-    position:absolute;
+.details {
+    display: inline-block;
 }
-.course > li:hover .action{
-    display: block;
+.course {
+    list-style: none;
+    /* color: red; */
+    color: #2ecc71;
+}
+.navbar-inverse {
+    /* background-color: #222; */
+    border-color: #080808;
+    background-color: #f39c12;
+}
+    .navbar-inverse .navbar-nav > li > a {
+        color: #27ae60;
+        font-size: 16px;
+        font-weight: bold;
+    }
+a.navbar-brand {
+    text-transform: uppercase;
+    /* color: red; */
+}
+.navbar-inverse .navbar-brand {
+    color: black;
+    font-weight: 500;
 }
